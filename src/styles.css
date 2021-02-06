@@ -1,4 +1,50 @@
-.App {
-  font-family: sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(241, 224, 224);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  padding: 1rem;
+  width: 70vw;
+  background-color: #cafffb;
+  font-family: "Segoe UI";
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #048243;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  /* border: 5px solid red; */
+  padding: 0.5rem 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  border: none;
+  margin: 1rem;
+  background-color: #048243;
+  color: #cafffb;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
