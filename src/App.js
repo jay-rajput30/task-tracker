@@ -1,9 +1,11 @@
 import "./styles.css";
+import { useState } from "react";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 export default function App() {
   //list of tasks
-  let tasks = [
+
+  let [tasks, setTasks] = useState([
     {
       id: 1,
       name: "task one",
@@ -11,22 +13,26 @@ export default function App() {
       reminder: false
     },
     {
-      id: 1,
+      id: 2,
       name: "task two",
       day: "March 20th",
       reminder: false
     },
     {
-      id: 1,
+      id: 3,
       name: "task three",
       day: "Aug 2nd",
       reminder: false
     }
-  ];
+  ]);
+
+  let deleteThis = (id) => {
+    console.log("delete", id);
+  };
   return (
     <div className="container">
-      <Header className="header" text="Task Tracker" />
-      <Tasks tasks={tasks} />
+      <Header text="Task Tracker" />
+      <Tasks tasks={tasks} deleteThis={deleteThis} />
     </div>
   );
 }

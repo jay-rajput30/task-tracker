@@ -1,8 +1,10 @@
-let Tasks = ({ tasks }) => {
+import Task from "./Task";
+
+let Tasks = ({ tasks, deleteThis }) => {
   return (
     <>
-      {tasks.map((task) => {
-        return <h3>{task.name}</h3>;
+      {tasks.map((item) => {
+        return <Task key={item.id} item={item} deleteThis={deleteThis} />;
       })}
     </>
   );
