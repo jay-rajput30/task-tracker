@@ -3,8 +3,8 @@ import Task from "./Task";
 let Tasks = ({ tasks, deleteThis }) => {
   return (
     <>
-      {tasks.map((item) => {
-        return <Task key={item.id} item={item} deleteThis={deleteThis} />;
+      {tasks.map((task) => {
+        return <Task key={task.id} task={task} deleteThis={deleteThis} />;
       })}
     </>
   );

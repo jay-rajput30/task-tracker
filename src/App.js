@@ -27,7 +27,12 @@ export default function App() {
   ]);
 
   let deleteThis = (id) => {
-    console.log("delete", id);
+    console.log(id);
+    // setTasks(
+    //   tasks.filter((task) => {
+    //     return task.id !== id;
+    //   })
+    // );
   };
   return (
     <div className="container">
